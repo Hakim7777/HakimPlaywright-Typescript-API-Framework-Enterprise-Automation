@@ -1,88 +1,92 @@
-# HakimPlaywright-Typescript-API-Framework-Enterprise-Automation
-
+# 🚀 Projet Playwright TypeScript Enterprise Automation Framework
 [![Playwright Tests](https://img.shields.io/badge/Playwright-Test-blue)](#)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue)](#)
 [![Node.js](https://img.shields.io/badge/Node.js-v18-green)](#)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
-## 🚀 Présentation
-LinkedIn : Hakim Alaoui Sahraoui
----------
-**HakimPlaywright-Typescript-API-Framework-Enterprise-Automation** est un framework d'automatisation de tests UI et API, développé en **TypeScript** et basé sur **Playwright**. Conçu pour les environnements **Entreprise** et **CI/CD**, il offre :
+Bienvenue dans mon **Playwright TypeScript Enterprise Automation Framework** ! Ce projet a pour objectif d’automatiser l’UI et les API de [SauceDemo](https://www.saucedemo.com) et de proposer une structure prête pour l’entreprise.
 
-* 🔹 Tests fonctionnels UI cross‑browser (Chromium, Firefox, WebKit)
-* 🔹 Tests API REST modulaires et réutilisables
-* 🔹 Génération de rapports HTML détaillés avec traces, captures et vidéos
-* 🔹 Intégration continue via **GitHub Actions**
-* 🔹 Structure projet scalable : POM, utils, test‑data
+## 📋 Table des matières
 
-## 📁 Structure du projet
+- 🔧 Installation
+- ▶️ Exécution des tests
+- 📂 Structure du projet
+- ✅ Test cases
+- 🤝 Contribuer
+- 📄 Licence
+- 🔗 Suivez-moi sur LinkedIn
 
-```
-├── src/tests
-│   ├── api            # Tests API (ReqRes)
-│   └── ui             # Tests UI (Saucedemo)
-├── pages             # Page Objects
-├── utils             # Fonctions utilitaires
-├── test-data         # Fichiers de données JSON
-├── playwright.config.ts
-├── package.json
-└── .github/workflows  # CI GitHub Actions
-```
+---
 
-## ⚙️ Installation
+## 🔧 Installation
 
 ```bash
-# Cloner le repository
-git clone git@github.com:Hakim7777/HakimPlaywright-Typescript-API-Framework-Enterprise-Automation.git
-cd HakimPlaywright-Typescript-API-Framework-Enterprise-Automation
+# Clonez le dépôt
+git clone https://github.com/Hakim7777/HakimPlaywright-Typescript-Framework-Enterprise-Automation.git
+cd HakimPlaywright-Typescript-Framework-Enterprise-Automation
 
-# Installer les dépendances
-npm ci
-
-# Installer les navigateurs Playwright
-npx playwright install --with-deps
+# Installez les dépendances
+npm install
 ```
 
 ## ▶️ Exécution des tests
 
 ```bash
-# Lancer tous les tests UI + API
+# Tests UI + API sur tous les navigateurs
 npx playwright test
 
-# Lancer uniquement les tests API
-npx playwright test --project=api
-
-# Lancer uniquement les tests UI (cross-browser)
-npx playwright test --project=chromium,firefox,webkit
+# Rapport HTML
+npx playwright show-report
 ```
 
-## 📊 Rapports
+---
 
-```bash
-# Générer et afficher le rapport HTML
-npx playwright show-report --port=9323
+## 📂 Structure du projet
+
+```
+├── src/
+│   ├── api/                # Tests API isolés
+│   ├── pages/              # Page Objects
+│   ├── tests/              # Scénarios de tests UI
+│   ├── utils/              # Helpers (logger, etc.)
+│   └── test-data/          # Données JSON de tests
+├── screenshots/            # Captures & vidéos des tests
+├── playwright-report/      # Rapport HTML généré
+├── .github/workflows/      # CI/CD GitHub Actions
+└── README.md               # Ce fichier
 ```
 
-## 🔧 Intégration CI (GitHub Actions)
+---
 
-Le workflow `.github/workflows/playwright.yml` comprend :
+## ✅ Test cases
 
-* Exécution matrix cross‑browser
-* Publication des artefacts (reports, traces)
+| Fichier de test                    | Description                           |
+| ---------------------------------- | ------------------------------------- |
+| `src/tests/LoginTest.spec.ts`      | Connexion avec identifiants invalides |
+| `src/tests/LoginLockedOut.spec.ts` | Scénario utilisateur bloqué           |
+| `src/tests/CheckoutError.spec.ts`  | Erreur de champs obligatoires         |
+| …                                  | …                                     |
 
-## 🤝 Contribution
+*(Liste complète dans `docs/test-cases.md` à venir)*
 
-Contributions bienvenues ! Merci de :
+---
 
-1. Forker le projet
-2. Créer une branche `feature/...`
-3. Commit clair et descriptif
-4. Ouvrir une Pull Request détaillée
+## 🤝 Contribuer
 
-## 📄 License
+1. Forkez ce dépôt
+2. Créez votre branche (`git checkout -b feature/ma-feature`)
+3. Commitez vos changements (`git commit -m 'Ajouter une feature'`)
+4. Poussez (`git push origin feature/ma-feature`)
+5. Ouvrez une Pull Request
 
-Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE).
+---
 
-## 📬 Contact
+## 📄 Licence
 
-Projet personnel par Hakim Sahraoui – (mailto:hakimsahraoui.de@gmail.com)
+Ce projet est sous licence MIT.
+
+---
+
+## 🔗 Retrouve-moi sur LinkedIn
+
+🔹 [Abdelhakim SAHRAOUI](https://www.linkedin.com/in/hakim-alaoui-sahraoui-5a397a169/)
+
