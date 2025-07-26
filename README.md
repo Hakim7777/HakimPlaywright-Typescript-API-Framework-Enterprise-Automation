@@ -4,7 +4,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue)](#)
 [![Node.js](https://img.shields.io/badge/Node.js-v18-green)](#)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
-
+LinkedIn : Hakim Alaoui Sahraoui
 ## 🚀 Présentation
 
 **HakimPlaywright-Typescript-API-Framework-Enterprise-Automation** est un framework d'automatisation de tests UI et API, développé en **TypeScript** et basé sur **Playwright**. Conçu pour les environnements **Entreprise** et **CI/CD**, il offre :
