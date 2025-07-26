@@ -1,41 +1,42 @@
-// tests/api/api.spec.ts
-import { test, expect, APIRequestContext } from '@playwright/test';
+// src/tests/api/api.spec.ts
+import { test, expect } from '@playwright/test';
 
-test.describe('API – Saucedemo', () => {
-  let api: APIRequestContext;
+test.describe.configure({ retries: 0, timeout: 30_000 });
 
-  test.beforeAll(async ({ request }) => {
-    api = await request.newContext({ baseURL: 'https://www.saucedemo.com' });
-  });
+const BASE_URL = 'https://reqres.in/api';
 
-  test('GET /status renvoie 200', async () => {
-    const res = await api.get('/status');
+test.describe('API – ReqRes', () => {
+  test('GET /users/2 renvoie 200 et un utilisateur', async ({ request }) => {
+    const res = await request.get(`${BASE_URL}/users/2`);
     expect(res.status()).toBe(200);
+    const body = await res.json();
+    expect(body.data).toBeDefined();
+    expect(body.data.id).toBe(2);
   });
 
-  test('POST /login bons identifiants renvoie token', async () => {
-    const res = await api.post('/login', {
-      data: { username: 'standard_user', password: 'secret_sauce' }
+  test('POST /login bons identifiants renvoie token', async ({ request }) => {
+    const res = await request.post(`${BASE_URL}/login`, {
+      data: { email: 'eve.holt@reqres.in', password: 'cityslicka' }
     });
-    expect(res.ok()).toBeTruthy();
+    expect(res.status()).toBe(200);
     const body = await res.json();
     expect(body.token).toBeDefined();
   });
 
-  test('POST /login mauvais identifiants renvoie 401', async () => {
-    const res = await api.post('/login', {
-      data: { username: 'invalid', password: 'wrong' }
+  test('POST /login sans mot de passe renvoie 400', async ({ request }) => {
+    const res = await request.post(`${BASE_URL}/login`, {
+      data: { email: 'peter@klaven' }
     });
-    expect(res.status()).toBe(401);
-    const err = await res.json();
-    expect(err.error).toContain('Username and password');
+    expect(res.status()).toBe(400);
+    const body = await res.json();
+    expect(body.error).toContain('Missing password');
   });
 
-  test('GET /products renvoie une liste non vide', async () => {
-    const res = await api.get('/products');
+  test('GET /unknown renvoie une page de ressources', async ({ request }) => {
+    const res = await request.get(`${BASE_URL}/unknown`);
     expect(res.status()).toBe(200);
-    const products = await res.json();
-    expect(Array.isArray(products)).toBe(true);
-    expect(products.length).toBeGreaterThan(0);
+    const body = await res.json();
+    expect(Array.isArray(body.data)).toBe(true);
+    expect(body.data.length).toBeGreaterThan(0);
   });
 });
