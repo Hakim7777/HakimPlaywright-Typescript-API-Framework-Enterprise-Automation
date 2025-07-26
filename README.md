@@ -1,4 +1,5 @@
 # 🚀 Projet Playwright TypeScript Enterprise Automation Framework
+--
 [![Playwright Tests](https://img.shields.io/badge/Playwright-Test-blue)](#)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue)](#)
 [![Node.js](https://img.shields.io/badge/Node.js-v18-green)](#)
