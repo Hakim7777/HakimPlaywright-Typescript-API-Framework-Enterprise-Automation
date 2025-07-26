@@ -4,6 +4,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue)](#)
 [![Node.js](https://img.shields.io/badge/Node.js-v18-green)](#)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+-
 Bienvenue dans mon **Playwright TypeScript Enterprise Automation Framework** ! Ce projet a pour objectif d’automatiser l’UI et les API de [SauceDemo](https://www.saucedemo.com) et de proposer une structure prête pour l’entreprise.
 
 ## 📋 Table des matières
