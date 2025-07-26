@@ -1,0 +1,55 @@
+# Page snapshot
+
+```yaml
+- main:
+  - navigation:
+    - link "All 6":
+      - /url: "#?"
+    - text: Passed 6 Failed 0 Flaky 0 Skipped 0
+  - textbox
+  - text: "7/21/2025, 6:50:53 PM Total time: 12.5s"
+  - button "example.spec.ts" [expanded]
+  - region:
+    - link "has title":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-b06063a3e613764d08f8"
+    - link "chromium":
+      - /url: "#?q=p:chromium"
+    - text: 1.8s
+    - link "example.spec.ts:3":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-b06063a3e613764d08f8"
+    - link "get started link":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-274e97907a6e3638a22f"
+    - link "chromium":
+      - /url: "#?q=p:chromium"
+    - text: 2.2s
+    - link "example.spec.ts:10":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-274e97907a6e3638a22f"
+    - link "has title":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-f53a5ad453cd33dc57d5"
+    - link "firefox":
+      - /url: "#?q=p:firefox"
+    - text: 3.2s
+    - link "example.spec.ts:3":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-f53a5ad453cd33dc57d5"
+    - link "get started link":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-bfe080d6fe34297f494c"
+    - link "firefox":
+      - /url: "#?q=p:firefox"
+    - text: 4.8s
+    - link "example.spec.ts:10":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-bfe080d6fe34297f494c"
+    - link "has title":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-4a26ebd06a6b810edcc2"
+    - link "webkit":
+      - /url: "#?q=p:webkit"
+    - text: 3.1s
+    - link "example.spec.ts:3":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-4a26ebd06a6b810edcc2"
+    - link "get started link":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-1eb159041d56409ed83c"
+    - link "webkit":
+      - /url: "#?q=p:webkit"
+    - text: 3.3s
+    - link "example.spec.ts:10":
+      - /url: "#?testId=a30a6eba6312f6b87ea5-1eb159041d56409ed83c"
+```

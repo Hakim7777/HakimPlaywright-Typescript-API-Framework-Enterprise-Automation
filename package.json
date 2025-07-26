@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./src/Types",
+      "./node_modules/@types"
+    ],
+    "types": [
+      "@playwright/test"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
