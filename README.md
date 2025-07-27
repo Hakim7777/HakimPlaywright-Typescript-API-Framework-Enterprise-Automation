@@ -2,13 +2,14 @@
 
 ````markdown
 # 🚀 Playwright TypeScript Enterprise Automation Framework
-
+-----
 [![Playwright Tests](https://img.shields.io/badge/Playwright-Test-blue)](https://playwright.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-v18-green)](https://nodejs.org/)
-[![Jenkins Build](https://img.shields.io/badge/Jenkins-Build%20Passing-brightgreen)](https://localhost:8080) <!-- lien à modifier si build public -->
-[![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-blue)](.github/workflows/playwright.yml)
+[![Jenkins Build](https://img.shields.io/badge/Jenkins-Build%20Passing-brightgreen)](#)
+[![GitHub Actions](https://img.shields.io/badge/GitHub--Actions-CI-blue)](#)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+
 
 ---
 
