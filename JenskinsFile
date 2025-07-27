@@ -1,0 +1,61 @@
+pipeline {
+  agent any
+
+  tools {
+    nodejs 'Node18'
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        git 'https://github.com/Hakim7777/HakimPlaywright-Typescript-API-Framework-Enterprise-Automation.git'
+      }
+    }
+
+    stage('Install dependencies') {
+      steps {
+        sh 'npm ci'
+      }
+    }
+
+    stage('Install Playwright Browsers') {
+      steps {
+        sh 'npx playwright install --with-deps'
+      }
+    }
+
+    stage('Run Tests') {
+      steps {
+        sh 'npx playwright test'
+      }
+    }
+
+    stage('Publish Report') {
+      steps {
+        publishHTML([
+          reportDir: 'playwright-report',
+          reportFiles: 'index.html',
+          reportName: 'Playwright Test Report',
+          keepAll: true,
+          alwaysLinkToLastBuild: true,
+          allowMissing: false
+        ])
+      }
+    }
+
+    stage('Archive Videos & Screenshots') {
+      steps {
+        archiveArtifacts artifacts: 'screenshots/**/*.*', allowEmptyArchive: true
+      }
+    }
+  }
+
+  post {
+    failure {
+      echo '⚠️ Build failed. Check logs.'
+    }
+    success {
+      echo '✅ Build successful.'
+    }
+  }
+}
