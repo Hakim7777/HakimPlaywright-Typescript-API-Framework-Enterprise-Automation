@@ -1,7 +1,4 @@
-### 📝 README.md – Version complète à 100 %
-
-````markdown
-# 🚀 Playwright TypeScript Enterprise Automation Framework
+🚀 Playwright TypeScript Enterprise Automation Framework
 -----
 [![Playwright Tests](https://img.shields.io/badge/Playwright-Test-blue)](https://playwright.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue)](https://www.typescriptlang.org/)
